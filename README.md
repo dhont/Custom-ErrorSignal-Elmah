@@ -17,8 +17,11 @@ Usage:
 -------------------
 If the library is added using NuGet in a ASP.NET project, then all you have to do is call:
 
-  var errorInfo = CustomErrorSignal.Handle(ex);
-  var errorInfo = CustomErrorSignal.GetCurrentContext().Raise(ex); // when the application is web only
+
+        var errorInfo = CustomErrorSignal.Handle(ex);
+  
+        var errorInfo = CustomErrorSignal.GetCurrentContext().Raise(ex); // when the application is web only
+  
 
 
 If NuGet is not used, compile the library (.NET 2.0) and add the library to your project. It depends only on elmah.core to run. When used in a web application, In web.config modifiy the module AND httpmodule ErrorLog to use ElmahExtensions.CustomErrorLogModule, ElmahExtensions.
