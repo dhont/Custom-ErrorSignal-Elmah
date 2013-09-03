@@ -9,7 +9,7 @@ About ErrorSignal
 ----------------------
 Is a flexible API introduce in ELMAH to manually log errors, along with the entire application context (even FORM Data  and server/client variables)
 
-About CustomErrorSignal (avilable on NuGet as well)
+About CustomErrorSignal (available on NuGet as well)
 -----------------------------
 This is an alternative to ErrorSignal component. It provides a wrapper for manually logging errors even in console applications or automated tests and returns the ErrorId of the raised exception.
 
