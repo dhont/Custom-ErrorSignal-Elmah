@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Custom-errorsignal-elmah : An alternative to ErrorSignal component in Elmah logging library." />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Custom-errorsignal-elmah</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/dhont/Custom-ErrorSignal-Elmah">View on GitHub</a>
+
+          <h1 id="project_title">Custom-errorsignal-elmah</h1>
+          <h2 id="project_tagline">An alternative to ErrorSignal component in Elmah logging library.</h2>
+
+            <section id="downloads">
+              <a class="zip_download_link" href="https://github.com/dhont/Custom-ErrorSignal-Elmah/zipball/master">Download this project as a .zip file</a>
+              <a class="tar_download_link" href="https://github.com/dhont/Custom-ErrorSignal-Elmah/tarball/master">Download this project as a tar.gz file</a>
+            </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>
+<a name="custom-errorsignal-elmah" class="anchor" href="#custom-errorsignal-elmah"><span class="octicon octicon-link"></span></a>Custom-ErrorSignal-Elmah</h1>
+
+<h2>
+<a name="about-elmah" class="anchor" href="#about-elmah"><span class="octicon octicon-link"></span></a>About ELMAH:</h2>
+
+<p>ELMAH (Error Logging Modules and Handlers) is an application-wide error logging facility that is completely pluggable. It can be dynamically added to a running ASP.NET web application, or even all ASP.NET web applications on a machine, without any need for re-compilation or re-deployment.</p>
+
+<h2>
+<a name="about-errorsignal" class="anchor" href="#about-errorsignal"><span class="octicon octicon-link"></span></a>About ErrorSignal</h2>
+
+<p>Is a flexible API introduce in ELMAH to manually log errors, along with the entire application context (even FORM Data  and server/client variables)</p>
+
+<h2>
+<a name="about-customerrorsignal-available-on-nuget-as-well" class="anchor" href="#about-customerrorsignal-available-on-nuget-as-well"><span class="octicon octicon-link"></span></a>About CustomErrorSignal (available on NuGet as well)</h2>
+
+<p>This is an alternative to ErrorSignal component. It provides a wrapper for manually logging errors even in console applications or automated tests and returns the ErrorId of the raised exception.</p>
+
+<h2>
+<a name="usage" class="anchor" href="#usage"><span class="octicon octicon-link"></span></a>Usage:</h2>
+
+<p>If the library is added using NuGet in a ASP.NET project, then all you have to do is call:</p>
+
+<pre><code>    var errorInfo = CustomErrorSignal.Handle(ex);
+
+    var errorInfo = CustomErrorSignal.GetCurrentContext().Raise(ex); // when the application is web only
+</code></pre>
+
+<p>If NuGet is not used, compile the library (.NET 2.0) and add the library to your project. It depends only on elmah.core to run. When used in a web application, In web.config modifiy the module AND httpmodule ErrorLog to use ElmahExtensions.CustomErrorLogModule, ElmahExtensions.</p>
+
+<h2>
+<a name="references" class="anchor" href="#references"><span class="octicon octicon-link"></span></a>References</h2>
+
+<pre><code>https://code.google.com/p/elmah/source/checkout
+
+http://stackoverflow.com/questions/841451/using-elmah-in-a-console-application/1068378#1068378
+
+http://robrich.org/archive/2012/05/02/elmah-return-the-errorid-from-signal-raise.aspx
+</code></pre>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Custom-errorsignal-elmah maintained by <a href="https://github.com/dhont">dhont</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
