@@ -5,7 +5,7 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("ElmahExtensions")]
+[assembly: AssemblyTitle("CustomErrorSignal")]
 [assembly: AssemblyDescription("Provides an alternative to ELMAH's Error Signal by returning the errorId. Also enables logging in unit tests and console applications.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
