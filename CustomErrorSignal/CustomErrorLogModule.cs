@@ -73,9 +73,11 @@ namespace ElmahExtensions
         
         protected override void OnInit(HttpApplication application)
         {
-            if (application == null)
-                throw new ArgumentNullException("application");
-            
+            //if (application == null)
+            //    throw new ArgumentNullException("application");
+            application = application ?? new HttpApplication();
+
+
             application.Error += OnError;
             CustomErrorSignal.Get(application).Raised += OnCustomErrorSignaled;
         }

@@ -121,7 +121,11 @@ namespace ElmahExtensions
                 return x.ErrorLogEntry;
             }
 
-            return null;
+            ErrorLog errorLog = ErrorLog.GetDefault(null);
+            errorLog.ApplicationName = "ConsoleApplication";
+            var err = errorLog.Log(new Error(e));
+            return errorLog.GetError(err);
+
         }
 
         public static CustomErrorSignal FromCurrentContext()
@@ -139,9 +143,9 @@ namespace ElmahExtensions
 
         public static CustomErrorSignal Get(HttpApplication application)
         {
-            if (application == null)
-                throw new ArgumentNullException("application");
-
+            //if (application == null)
+            //    throw new ArgumentNullException("application");
+            application = application ?? new HttpApplication();
             lock (Lock)
             {
                 //
@@ -152,7 +156,7 @@ namespace ElmahExtensions
                     _signalByApp = new Hashtable();
 
                 //
-                // Get the list of modules fot the application. If this is
+                // Get the list of modules for the application. If this is
                 // the first registration for the supplied application object
                 // then setup a new and empty list.
                 //
