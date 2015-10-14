@@ -6,7 +6,7 @@ using System.Runtime.InteropServices;
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
 [assembly: AssemblyTitle("ElmahExtensions")]
-[assembly: AssemblyDescription("")]
+[assembly: AssemblyDescription("Provides an alternative to ELMAH's Error Signal by returning the errorId. Also enables logging in unit tests and console applications.")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("CustomErrorSignal")]
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("1.0.7.0")]
-[assembly: AssemblyFileVersion("1.0.7.0")]
+[assembly: AssemblyVersion("1.0.8.0")]
+[assembly: AssemblyFileVersion("1.0.8.0")]
