@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <system.web>
+    <httpModules>
+      <add name="ErrorLog" type="ElmahExtensions.CustomErrorLogModule, ElmahExtensions" xdt:Transform="SetAttributes" xdt:Locator="Match(name)" />
+    </httpModules>
+  </system.web>
+  <system.webServer>
+    <modules>
+      <add name="ErrorLog" type="ElmahExtensions.CustomErrorLogModule, ElmahExtensions" preCondition="managedHandler" xdt:Transform="SetAttributes" xdt:Locator="Match(name)"/>
+    </modules>
+  </system.webServer>
+</configuration>

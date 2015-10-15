@@ -52,6 +52,8 @@
   <ItemGroup>
     <None Include="CustomErrorSignal.nuspec" />
     <None Include="packages.config" />
+    <Content Include="web.config.install.xdt" />
+    <Content Include="web.config.uninstall.xdt" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
